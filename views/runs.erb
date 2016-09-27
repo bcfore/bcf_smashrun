@@ -1,0 +1,22 @@
+<div id="all-runs">
+  <h2>List of all runs</h2>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Duration</th>
+      <th>Distance</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @runs_data.each do |run| %>
+      </tr>
+        <td><%= run.date_pretty %></td>
+        <td><%= run.duration_pretty %></td>
+        <td><%= run.distance_pretty %></td>
+        <td class="hidden"><a href="/runs/edit/<%= run.id %>">Edit</a></td>
+        <td class="hidden"><a href="/runs/delete/<%= run.id %>">Delete</a></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

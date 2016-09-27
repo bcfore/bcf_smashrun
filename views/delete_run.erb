@@ -1,0 +1,9 @@
+<% content_for :flash_form do %>
+  <form class="inline-button" action="/runs/delete/<%= @run_id %>" method="post">
+    <button>Delete</button>
+  </form>
+
+  <form class="inline-button" action="/runs" method="get">
+    <button>Cancel</button>
+  </form>
+<% end %>

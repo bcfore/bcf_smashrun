@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>BCF Smashrun</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/whitespace-reset.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+    <!--script src="/javascripts/jquery-3.1.0.js"></script-->
+    <!--script src="/javascripts/application.js"></script-->
+  </head>
+  <body>
+    <header>
+      <h1>BCF Smashrun</h1>
+      <div id="menu">
+        <ul>
+          <li><a href='/overview'>OVERVIEW</a></li>
+          <li><a href='/by_run'>BY RUN</a></li>
+          <li><a href='/list'>LIST</a></li>
+          <li><a href='/add_run'>ADD RUN</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="flash-region">
+      <% if session[:msg] %>
+        <div class="flash-success">
+          <%= session.delete(:msg) %>
+        </div>
+      <% end %>
+      <%= yield_content :flash_form %>
+    </div>
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>

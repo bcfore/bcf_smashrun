@@ -1,0 +1,26 @@
+---
+- !ruby/object:Run
+  date: '2016-09-24'
+  duration: 9010.0
+  distance: 10.5555
+  id: 5
+- !ruby/object:Run
+  date: '2016-09-26'
+  duration: 5504.0
+  distance: 20.0
+  id: 6
+- !ruby/object:Run
+  date: ''
+  duration: 0.0
+  distance: 0.0
+  id: 10
+- !ruby/object:Run
+  date: ''
+  duration: 0.0
+  distance: 0.0
+  id: 11
+- !ruby/object:Run
+  date: ''
+  duration: 0.0
+  distance: 0.0
+  id: 12

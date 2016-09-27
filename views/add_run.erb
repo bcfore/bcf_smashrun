@@ -1,0 +1,16 @@
+<div id="add-run">
+  <form action="/runs/new" method="post">
+    <ul>
+      <li><label for="date">Date</label></li>
+      <li class="input-row"><input name="date" type="date" placeholder="mm/dd/yyyy" /></li>
+      <li><label for="duration">Duration</label></li>
+      <li class="input-row">
+        <input name="hours" type="text" maxlength=2 size=1 value=0 /> hrs<br>
+        <input name="minutes" type="text" maxlength=3 size=1 value=0 /> mins<br>
+        <input name="seconds" type="text" maxlength=2 size=1 value=0 /> secs
+      </li>
+      <li><label for="distance">Distance</label></li>
+      <li class="input-row"><input name="distance" type="text" placeholder="in km" /></li>
+      <li><button type="submit">Add run</button></li>
+  </form>
+</div>

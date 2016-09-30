@@ -13,10 +13,18 @@
       <h1>BCF Smashrun</h1>
       <div id="menu">
         <ul>
-          <li><a href='/overview'>OVERVIEW</a></li>
-          <li><a href='/by_run'>BY RUN</a></li>
-          <li><a href='/list'>LIST</a></li>
-          <li><a href='/add_run'>ADD RUN</a></li>
+          <li class=<%= "selected" if session[:selected_menu_item] == 1 %>>
+            <a href='/overview'>OVERVIEW</a>
+          </li>
+          <li class=<%= "selected" if session[:selected_menu_item] == 2 %>>
+            <a href='/by_run'>BY RUN</a>
+          </li>
+          <li class=<%= "selected" if session[:selected_menu_item] == 3 %>>
+            <a href='/runs'>LIST</a>
+          </li>
+          <li class=<%= "selected" if session[:selected_menu_item] == 4 %>>
+            <a href='/add_run'>ADD RUN</a>
+          </li>
         </ul>
       </div>
     </header>

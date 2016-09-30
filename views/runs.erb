@@ -1,19 +1,32 @@
+<% content_for :flash_form do %>
+  <%= yield if block_given? %>
+<% end %>
+
 <div id="all-runs">
-  <h2>List of all runs</h2>
   <table>
     <tr>
-      <th>Date</th>
-      <th>Duration</th>
-      <th>Distance</th>
-      <th></th>
-      <th></th>
+      <th class="hidden"></th>
+      <th><a href='/runs/sort?by=date'><%= display_sort_symbol('date') %>Date</a></th>
+      <th><a href='/runs/sort?by=duration'><%= display_sort_symbol('duration') %>Duration</a></th>
+      <th><a href='/runs/sort?by=distance'><%= display_sort_symbol('distance') %>Distance</a></th>
+      <th><a href='/runs/sort?by=speed'><%= display_sort_symbol('speed') %>Speed (kph)</a></th>
+      <th><a href='/runs/sort?by=pace'><%= display_sort_symbol('pace') %>Pace</a></th>
+      <th class="hidden"></th>
+      <th class="hidden"></th>
     </tr>
 
     <% @runs_data.each do |run| %>
-      </tr>
+      <% if @is_deletion_mode %>
+        <tr class=<%= "selected" if run.is_selected? %>>
+      <% else %>
+        <tr class="unselected">
+      <% end %>
+        <td><%= display_notification(run) %></td>
         <td><%= run.date_pretty %></td>
-        <td><%= run.duration_pretty %></td>
+        <td><div class="pad_right"><%= run.duration_pretty %></div></td>
         <td><%= run.distance_pretty %></td>
+        <td><%= run.speed_pretty %></td>
+        <td><%= run.pace_pretty %></td>
         <td class="hidden"><a href="/runs/edit/<%= run.id %>">Edit</a></td>
         <td class="hidden"><a href="/runs/delete/<%= run.id %>">Delete</a></td>
       </tr>

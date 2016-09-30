@@ -30,7 +30,8 @@ body > header h1 {
   font-size: 0.7em;
 }
 
-#menu li:hover {
+#menu li:hover,
+#menu li.selected {
   background-color: dimgray;
   border-radius: 8px;
 }
@@ -49,18 +50,13 @@ body > header h1 {
 /*   border-color: darkslateblue; */
 /* } */
 
-.inline-button {
+.inline-form{
   display: inline;
 }
 
 #flash-region {
-  /* background-color: white; */
   height: 40px;
   line-height: 40px;
-}
-
-.flash-success {
-  display: inline;
 
   font-weight: bold;
   color: green;
@@ -68,31 +64,40 @@ body > header h1 {
   padding: 0 20px;
 }
 
+.flash-success {
+  display: inline;
+}
+
 #all-runs {
   background-color: thistle;
   padding: 10px 20px;
 }
 
-#all-runs h2 {
-
-}
-
 #all-runs table {
+  /* border: 1px solid black; */
   border-collapse: collapse;
   table-layout: fixed;
 }
 
+#all-runs th {
+  /* padding: 0 10px; */
+  text-align: center;
+  /* text-indent: 1em; */
+  width: 8em;
+}
+
 #all-runs td {
+  /* border: 1px solid black; */
   padding: 0 10px;
   text-align: right;
 }
 
-#all-runs th {
-  padding: 0 10px;
-  text-align: center;
+#all-runs td div.pad_right {
+  margin-right: 1em;
 }
 
-#all-runs tr:hover {
+#all-runs  tr.unselected:hover,
+#all-runs tr.selected {
   color: darkslateblue;
   background-color: plum;
 }
@@ -101,11 +106,17 @@ body > header h1 {
   visibility: hidden;
 }
 
-#all-runs tr:hover td.hidden {
+#all-runs tr.unselected:hover td.hidden {
   visibility: visible;
 }
 
-#add-run {
+#all-runs .hidden {
+  width: 3em;
+  text-align: left;
+}
+
+/*
+#run-info {
   color: black;
   background-color: plum;
   width: 210px;
@@ -116,21 +127,30 @@ body > header h1 {
   border-style: solid;
   border-color: darkslateblue;
 }
-
-#add-run .input-row {
-  margin: 0 0 20px 20px;
-  font-size: 0.90em;
+*/
+#run-info {
+  font-weight: bold;
+  background-color: thistle;
+  padding: 10px 20px;
 }
 
-#add-run button {
+#run-info .input-row {
+  font-weight: normal;
+  margin: 0 0 20px 20px;
+  /*font-size: 0.90em;*/
+}
+
+/*
+#run-info button {
   font-size: 0.90em;
   color: black;
-  background-color: thistle;
+  background-color: gray;
   border-radius: 5px;
   border-style: solid;
   border-color: darkslateblue;
 }
 
-#add-run button:hover {
+#run-info button:hover {
   border-color: mediumslateblue;
 }
+*/

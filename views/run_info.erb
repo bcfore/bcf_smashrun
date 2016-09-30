@@ -1,18 +1,27 @@
-<div id="add-run">
+<div id="run-info">
   <form action="/runs/<%= @action %>" method="post">
     <ul>
       <li><label for="date">Date</label></li>
-      <li class="input-row"><input name="date" type="date" placeholder="mm/dd/yyyy" value=<%= @date %> /></li>
+      <li class="input-row">
+        <input name="date" type="date" placeholder="mm/dd/yyyy" value=<%= @date %> />
+      </li>
+
       <li><label for="duration">Duration</label></li>
       <li class="input-row">
         <input name="hours" type="text" maxlength=2 size=1 value=<%= @hrs %> /> hrs<br>
         <input name="minutes" type="text" maxlength=3 size=1 value=<%= @mins %> /> mins<br>
         <input name="seconds" type="text" maxlength=2 size=1 value=<%= @secs %> /> secs
       </li>
+
       <li><label for="distance">Distance</label></li>
       <li class="input-row">
         <input name="distance" type="text" placeholder="in km" value="<%= @distance %>" />
       </li>
-      <li><button type="submit"><%= @button_label %></button></li>
+
+      <li class="inline-form" ><button type="submit"><%= @button_label %></button></li>
+  </form>
+
+  <form class="inline-form" action="/runs" method="get">
+    <button>Cancel</button>
   </form>
 </div>

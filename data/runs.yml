@@ -1,11 +1,11 @@
 ---
 - !ruby/object:Run
-  date: '2016-09-08'
-  duration: 10861.0
-  distance: 40.0
-  id: 2
-  speed: 13.258447656753521
-  pace: 271.525
+  date: '2016-10-02'
+  duration: 3600
+  distance: 13.555555555555555
+  id: 7
+  speed: 13.555555555555555
+  pace: 265.57377049180326
 - !ruby/object:Run
   date: '2016-09-29'
   duration: 5401.0
@@ -14,13 +14,6 @@
   speed: 13.330864654693576
   pace: 270.05
 - !ruby/object:Run
-  date: '2016-05-29'
-  duration: 3600.0
-  distance: 14.0
-  id: 6
-  speed: 14.0
-  pace: 257.14285714285717
-- !ruby/object:Run
   date: '2016-09-17'
   duration: 3754.0
   distance: 13.4
@@ -28,9 +21,23 @@
   speed: 12.850293020777837
   pace: 280.14925373134326
 - !ruby/object:Run
+  date: '2016-09-08'
+  duration: 10861.0
+  distance: 41.1
+  id: 2
+  speed: 13.623054967314244
+  pace: 264.25790754257906
+- !ruby/object:Run
   date: '2016-09-02'
   duration: 1080.0
   distance: 4.0
   id: 1
   speed: 13.333333333333334
   pace: 270.0
+- !ruby/object:Run
+  date: '2016-05-29'
+  duration: 3600
+  distance: 14.0
+  id: 6
+  speed: 14.0
+  pace: 257.14285714285717

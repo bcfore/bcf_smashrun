@@ -36,41 +36,60 @@ body > header h1 {
   border-radius: 8px;
 }
 
-/* .flash-message { */
-/*   font-weight: bold; */
-/*   background-color: limegreen; */
-/*   text-align: center; */
-
-/*   width: 320px; */
-/*   padding: 10px 0; */
-/*   margin: 10px 15px; */
-
-/*   border-radius: 10px; */
-/*   border-style: none; */
-/*   border-color: darkslateblue; */
-/* } */
-
 .inline-form{
   display: inline;
 }
 
 #flash-region {
+  display: inline;
+
   height: 40px;
   line-height: 40px;
+  padding: 0 20px;
 
   font-weight: bold;
   color: green;
-
-  padding: 0 20px;
 }
 
-.flash-success {
-  display: inline;
-}
-
-#all-runs {
+#overview,
+#all-runs,
+#welcome {
   background-color: thistle;
   padding: 10px 20px;
+}
+
+#welcome a {
+  color: steelblue;
+}
+
+#welcome ul {
+  list-style: disc outside none;
+}
+
+#welcome ul li {
+  margin: 5px 0;
+  display: list-item;
+  margin-left: 2em;
+}
+
+#overview .stat-table {
+  padding: 5px 20px;
+  /* width: 50%; */
+}
+
+#overview .stat-table .stat-element
+{
+  display: inline-block;
+  margin: 10px 10px;
+  width: 250px;
+}
+
+#overview .stat-table .stat-element .stat-label {
+  font-weight: bold;
+}
+
+#overview .stat-table .stat-element .stat-value {
+  margin: 0 1em;
 }
 
 #all-runs table {
@@ -90,6 +109,11 @@ body > header h1 {
   /* border: 1px solid black; */
   padding: 0 10px;
   text-align: right;
+}
+
+#all-runs td.run-notification {
+  color: green;
+  font-weight: bold;
 }
 
 #all-runs td div.pad_right {
@@ -115,19 +139,6 @@ body > header h1 {
   text-align: left;
 }
 
-/*
-#run-info {
-  color: black;
-  background-color: plum;
-  width: 210px;
-  padding: 10px 20px 10px 20px;
-  margin: 20px 20px;
-  font-size: 0.95em;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: darkslateblue;
-}
-*/
 #run-info {
   font-weight: bold;
   background-color: thistle;
@@ -137,20 +148,17 @@ body > header h1 {
 #run-info .input-row {
   font-weight: normal;
   margin: 0 0 20px 20px;
-  /*font-size: 0.90em;*/
 }
 
-/*
-#run-info button {
-  font-size: 0.90em;
-  color: black;
-  background-color: gray;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: darkslateblue;
+#error-list {
+  display: inline-block;
 }
 
-#run-info button:hover {
-  border-color: mediumslateblue;
+#error-list ul {
+  list-style: disc outside none;
 }
-*/
+
+#error-list ul li {
+  display: list-item;
+  margin-left: 3em;
+}

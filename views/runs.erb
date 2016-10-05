@@ -17,16 +17,16 @@
 
     <% @runs_data.each do |run| %>
       <% if @is_deletion_mode %>
-        <tr class=<%= "selected" if run.is_selected? %>>
+        <tr class=<%= "selected" if run.selected? %>>
       <% else %>
         <tr class="unselected">
       <% end %>
-        <td><%= display_notification(run) %></td>
+        <td class="run-notification"><%= display_notification(run) %></td>
         <td><%= run.date_pretty %></td>
         <td><div class="pad_right"><%= run.duration_pretty %></div></td>
-        <td><%= run.distance_pretty %></td>
-        <td><%= run.speed_pretty %></td>
-        <td><%= run.pace_pretty %></td>
+        <td><div class="pad_right"><%= run.distance_pretty %></div></td>
+        <td><div class="pad_right"><%= run.speed_pretty %></div></td>
+        <td><div class="pad_right"><%= run.pace_pretty %></div></td>
         <td class="hidden"><a href="/runs/edit/<%= run.id %>">Edit</a></td>
         <td class="hidden"><a href="/runs/delete/<%= run.id %>">Delete</a></td>
       </tr>

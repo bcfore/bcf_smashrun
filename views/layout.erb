@@ -10,19 +10,16 @@
   </head>
   <body>
     <header>
-      <h1>BCF Smashrun</h1>
+      <h1><a href='/'>BCF Smashrun</a></h1>
       <div id="menu">
         <ul>
-          <li class=<%= "selected" if session[:selected_menu_item] == 1 %>>
+          <li class=<%= "selected" if session[:selected_menu_item] == :overview %>>
             <a href='/overview'>OVERVIEW</a>
           </li>
-          <li class=<%= "selected" if session[:selected_menu_item] == 2 %>>
-            <a href='/by_run'>BY RUN</a>
+          <li class=<%= "selected" if session[:selected_menu_item] == :runs %>>
+            <a href='/runs'>ALL RUNS</a>
           </li>
-          <li class=<%= "selected" if session[:selected_menu_item] == 3 %>>
-            <a href='/runs'>LIST</a>
-          </li>
-          <li class=<%= "selected" if session[:selected_menu_item] == 4 %>>
+          <li class=<%= "selected" if session[:selected_menu_item] == :add_run %>>
             <a href='/add_run'>ADD RUN</a>
           </li>
         </ul>
@@ -31,10 +28,11 @@
 
     <div id="flash-region">
       <% if session[:msg] %>
-        <div class="flash-success">
-          <%= session.delete(:msg) %>
-        </div>
+        <%= session.delete(:msg) %>
+      <% else %>
+        <%= session[:sub_heading] %>
       <% end %>
+
       <%= yield_content :flash_form %>
     </div>
 

@@ -1,1 +1,59 @@
-Overview
+<div id="overview">
+  <div class="stat-table">
+
+    <div class="stat-row">
+      <div class="stat-element">
+        <div class="stat-label">Last run</div>
+        <div class="stat-value">
+          <%= display_last_run_message %>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-element">
+        <div class="stat-label">Total runs</div>
+        <div class="stat-value">
+          <%= @stats[:nb_runs] %>
+        </div>
+      </div>
+      <div class="stat-element">
+        <div class="stat-label">Total distance</div>
+        <div class="stat-value">
+          <%= @stats[:total_distance] %> km
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-element">
+        <div class="stat-label">Longest run</div>
+        <div class="stat-value">
+          <%= @stats[:longest_run] %> km
+        </div>
+      </div>
+      <div class="stat-element">
+        <div class="stat-label">Average distance</div>
+        <div class="stat-value">
+          <%= @stats[:ave_distance] %> km
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-element">
+        <div class="stat-label">Average pace</div>
+        <div class="stat-value">
+          <%= @stats[:ave_pace] %> per km
+        </div>
+      </div>
+      <div class="stat-element">
+        <div class="stat-label">Average speed</div>
+        <div class="stat-value">
+          <%= @stats[:ave_speed] %> km per hour
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

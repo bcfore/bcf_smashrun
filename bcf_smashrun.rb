@@ -141,6 +141,11 @@ end
 
 helpers do
   # Helper functions (visible in templates).
+
+  def h(param)
+    Rack::Utils.escape_html(value)
+  end
+
   def display_sort_symbol(col_name)
     prefs = load_prefs_data
 

@@ -7,19 +7,19 @@
     <ul>
       <li><label for="date">Date</label></li>
       <li class="input-row">
-        <input name="date" type="date" value=<%= @date ? @date : params[:date]%> >
+        <input name="date" type="date" value=<%== @date ? @date : params[:date]%> >
       </li>
 
       <li><label for="duration">Duration</label></li>
       <li class="input-row">
-        <input name="hours" type="text" maxlength=2 size=1 value=<%= @hrs ? @hrs : params[:hours] %> > hrs<br>
-        <input name="minutes" type="text" maxlength=3 size=1 value=<%= @mins ? @mins : params[:minutes]%> > mins<br>
-        <input name="seconds" type="text" maxlength=2 size=1 value=<%= @secs ? @secs : params[:seconds]%> > secs
+        <input name="hours" type="text" maxlength=2 size=1 value=<%== @hrs ? @hrs : params[:hours] %> > hrs<br>
+        <input name="minutes" type="text" maxlength=3 size=1 value=<%== @mins ? @mins : params[:minutes]%> > mins<br>
+        <input name="seconds" type="text" maxlength=2 size=1 value=<%== @secs ? @secs : params[:seconds]%> > secs
       </li>
 
       <li><label for="distance">Distance</label></li>
       <li class="input-row">
-        <input name="distance" type="text" value="<%= @distance ? @distance : params[:distance] %>" > km
+        <input name="distance" type="text" value="<%== @distance ? @distance : params[:distance] %>" > km
       </li>
 
       <li class="inline-form" ><button type="submit"><%= @is_edit ? "Done" : "Add run" %></button></li>

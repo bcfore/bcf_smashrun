@@ -41,3 +41,10 @@
   id: 6
   speed: 14.0
   pace: 257.14285714285717
+- !ruby/object:Run
+  date: '2016-10-05'
+  duration: 3600
+  distance: 13.8
+  id: 8
+  speed: 13.8
+  pace: 260.8695652173913
